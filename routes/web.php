@@ -10,7 +10,10 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', 'HomeController@getHome');
+Route::resource('catalog', 'CatalogController');
+
+/*Route::get('/', function()
 {
     return view('home');
 });
@@ -37,4 +40,4 @@ Route::get('/catalog/create', function()
 Route::get('/catalog/edit/{id}', function($id)
 {
     return view('catalog.edit', array('id'=>$id));
-});
+});*/
