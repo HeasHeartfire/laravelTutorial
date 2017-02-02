@@ -4,7 +4,8 @@
 
     <div class="row">
 	    <div class="col-sm-4">
-
+			
+			<h2>{{$pelicula['title']}}</h2>
 	        <img src="{{$pelicula['poster']}}"/>
 
 	    </div>
