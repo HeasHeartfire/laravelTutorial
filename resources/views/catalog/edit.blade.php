@@ -15,10 +15,10 @@
 			</div>
 
 			<div class="panel-body" style="padding:30px">
-				<form method="POST">
+				<form action="{{ url('/catalog') }}/{{$id}}" method="POST">
 					
-					{{-- TODO: Protección contra CSRF --}}
-    				<input name="_method" type="hidden" value="PUT">
+    				{{method_field('PUT')}}
+    				{{csrf_field()}}
     				<div class="form-group">
     					<label for="title">Título</label>
     					<input type="text" name="title" id="title" class="form-control">

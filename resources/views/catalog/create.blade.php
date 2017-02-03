@@ -15,9 +15,9 @@
 			</div>
 
 			<div class="panel-body" style="padding:30px">
-				<form method="POST">
+				<form action="{{ url('/catalog') }}" method="POST">
 				
-					{{-- TODO: Protección contra CSRF --}}
+    				{{csrf_field()}}
     
     				<div class="form-group">
     					<label for="title">Título</label>
