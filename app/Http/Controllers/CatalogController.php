@@ -39,9 +39,9 @@ class CatalogController extends Controller
             if($request->has("rented")) $peli->rented = true;
 
             $peli->save();
-            return 'Película modificada correctamente.<br><a href="/">Volver al catálogo</a>';
+            return 'Película modificada correctamente.<br><a href="'.url('/catalog/'.$peli->id).'">Volver a la película</a>';
         } else {
-            return 'No puedes dejar campos vacíos.<br><a class="btn btn-info" href="/">Volver al catálogo</a>';
+            return 'No puedes dejar campos vacíos.<br><a href="'.url('/catalog/'.$peli->id.'/edit').'">Reintentar</a>';
         }
     }
 
@@ -59,9 +59,9 @@ class CatalogController extends Controller
             if($request->has("rented")) $peli->rented = true;
 
             $peli->save();
-            return 'Película guardada correctamente.<br><a href="/">Volver al catálogo</a>';
+            return 'Película guardada correctamente.<br><a href="/catalog">Volver al catálogo</a>';
         } else {
-            return 'No puedes dejar campos vacíos.<br><a class="btn btn-info" href="/">Volver al catálogo</a>';
+            return 'No puedes dejar campos vacíos.<br><a href="'.url('/catalog/'.$peli->id.'/edit').'">Reintentar</a>';
         }
     }
 
